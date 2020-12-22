@@ -18,7 +18,11 @@ jobs:
         uses: actions/checkout@v2
         
       - name: Run script21
-        run: echo "Begin to run the script21..."
+        run: |
+          echo "Begin to run the script21..."
+          pwd
+          ls -a
+          echo "End the script21"
 
       # Runs the Super-Linter action
       - name: Run Super-Linter21
