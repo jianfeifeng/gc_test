@@ -21,6 +21,7 @@ jobs:
         run: |
           echo "Begin to run the script21..."
           pwd
+          ls -a
           echo "End the script21"
 
       # Runs the Super-Linter action
