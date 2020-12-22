@@ -19,6 +19,7 @@ jobs:
         
       - name: Run script21
         run: echo "Begin to run the script21..."
+             pwd
 
       # Runs the Super-Linter action
       - name: Run Super-Linter21
