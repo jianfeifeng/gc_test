@@ -1,7 +1,5 @@
 name: windows-x64-gpu-vs2019
 on: [push, pull_request]
-name: windows-x64-gpu-vs2019
-on: [push, pull_request]
 jobs:
   windows-vs2019-gpu:
     runs-on: windows-latest
