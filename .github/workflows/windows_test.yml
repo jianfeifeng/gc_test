@@ -24,7 +24,19 @@ jobs:
         7z x ./protobuf-3.11.2.zip
         cd protobuf-3.11.2
         echo "***download protobuf done"
-        pwd
         cmake -version
         mingw32-make -version
         echo "***done"
+        echo "***ls the path"
+        ls
+        echo "*** ls the path done"
+        Invoke-WebRequest -Uri http://downloads.sourceforge.net/gnuwin32/wget-1.11.4-1-bin.zip -OutFile wget.zip
+        
+        
+        
+        
+        
+        
+        
+        
+        
