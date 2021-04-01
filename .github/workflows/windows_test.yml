@@ -21,8 +21,8 @@ jobs:
       if: steps.cache-protobuf.outputs.cache-hit != 'true'
       run: |
         mkdir software && cd software
-        Invoke-WebRequest -Uri http://downloads.sourceforge.net/gnuwin32/wget-1.11.4-1-bin.zip -OutFile wget-1.11.4-1-bin.zip
-        7z x ./wget-1.11.4-1-bin.zip
+        Invoke-WebRequest -Uri https://github.com/JulioGold/wget/archive/refs/heads/master.zip -OutFile wget.zip
+        7z x ./wget.zip
         echo "***ls the files"
         ls
         echo "***ls done"
