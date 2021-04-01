@@ -28,7 +28,8 @@ jobs:
         echo "***ls the files"
         ls
         echo "***ls done"
-        wget
+        cmake -version
+        mingw32-make -version
 
         
         
