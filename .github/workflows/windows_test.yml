@@ -27,10 +27,11 @@ jobs:
         cmake -version
         mingw32-make -version
         echo "***done"
+        nvoke-WebRequest -Uri http://downloads.sourceforge.net/gnuwin32/wget-1.11.4-1-bin.zip -OutFile wget.zip
         echo "***ls the path"
         ls
         echo "*** ls the path done"
-        Invoke-WebRequest -Uri http://downloads.sourceforge.net/gnuwin32/wget-1.11.4-1-bin.zip -OutFile wget.zip
+        I
         
         
         
