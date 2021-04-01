@@ -1,5 +1,7 @@
 name: windows-x64-gpu-vs2019
 on: [push, pull_request]
+name: windows-x64-gpu-vs2019
+on: [push, pull_request]
 jobs:
   windows-vs2019-gpu:
     runs-on: windows-latest
@@ -11,18 +13,21 @@ jobs:
     - uses: actions/checkout@v2
       with:
         submodules: true
-    - name: down wget
+    - name: cache-protobuf
+      id: cache-protobuf
+      uses: actions/cache@v1
+      with:
+        path: "protobuf-install"
+        key: protobuf-windows-install
+    - name: protobuf
+      if: steps.cache-protobuf.outputs.cache-hit != 'true'
       run: |
         mkdir software && cd software
-        echo "***test wget"
-        cmake -version
-        mingw32-make -version
-        echo "***done"
         Invoke-WebRequest -Uri http://downloads.sourceforge.net/gnuwin32/wget-1.11.4-1-bin.zip -OutFile wget.zip
-        echo "***ls the path"
+        7z x ./protobuf-3.11.2.zip
+        echo "***ls the files"
         ls
-        echo "*** ls the path done"
-        7z x ./wget.zip && ls
+        echo "***ls done"
         
         
         
