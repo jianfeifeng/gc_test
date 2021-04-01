@@ -22,9 +22,7 @@ jobs:
         echo "***ls the path"
         ls
         echo "*** ls the path done"
-        unzip wget.zip
-        cd wget-1.11.4-1-bin/bin && pwd
-        echo "***done"
+        unzip wget.zip && ls
         
         
         
