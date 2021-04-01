@@ -11,17 +11,16 @@ jobs:
     - uses: actions/checkout@v2
       with:
         submodules: true
-    - name: cache-protobuf
-      id: cache-protobuf
+    - name: cache-wget
+      id: cache-wget
       uses: actions/cache@v1
       with:
-        path: "protobuf-install"
-        key: protobuf-windows-install
-    - name: protobuf
-      if: steps.cache-protobuf.outputs.cache-hit != 'true'
+        path: "wget"
+        key: download-windows-wget
+    - name: wget
       run: |
-        Invoke-WebRequest -Uri https://github.com/protocolbuffers/protobuf/archive/v3.11.2.zip -OutFile protobuf-3.11.2.zip
-        echo "***download protobuf done"
+        mkdir software
+        echo "***test wget"
         cmake -version
         mingw32-make -version
         echo "***done"
