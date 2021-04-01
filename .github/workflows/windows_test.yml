@@ -21,8 +21,6 @@ jobs:
       if: steps.cache-protobuf.outputs.cache-hit != 'true'
       run: |
         Invoke-WebRequest -Uri https://github.com/protocolbuffers/protobuf/archive/v3.11.2.zip -OutFile protobuf-3.11.2.zip
-        7z x ./protobuf-3.11.2.zip
-        cd protobuf-3.11.2
         echo "***download protobuf done"
         cmake -version
         mingw32-make -version
