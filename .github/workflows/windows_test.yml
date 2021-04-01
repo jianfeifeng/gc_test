@@ -22,7 +22,7 @@ jobs:
         echo "***ls the path"
         ls
         echo "*** ls the path done"
-        unzip wget.zip && ls
+        7z x ./wget.zip && ls
         
         
         
