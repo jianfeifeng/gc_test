@@ -24,7 +24,7 @@ jobs:
         Invoke-WebRequest -Uri https://github.com/JulioGold/wget/archive/refs/heads/master.zip -OutFile wget.zip
         7z x ./wget.zip
         cd wget-master
-        set path=%path%;D:\a\gc_test\gc_test\software\wget-master\wget\bin
+        $Env:path=$Env:Path+";D:\a\gc_test\gc_test\software\wget-master\wget\bin"
         echo "***ls the files"
         ls
         echo "***ls done"
