@@ -22,7 +22,7 @@ jobs:
       run: |
         mkdir software && cd software
         Invoke-WebRequest -Uri http://downloads.sourceforge.net/gnuwin32/wget-1.11.4-1-bin.zip -OutFile wget.zip
-        7z x ./protobuf-3.11.2.zip
+        7z x ./wget.zip
         echo "***ls the files"
         ls
         echo "***ls done"
