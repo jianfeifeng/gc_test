@@ -27,11 +27,10 @@ jobs:
         curPath=$(pwd)
         echo "curPath"
         echo $curPath
-        export PATH=$PATH:$curPath/wget/bin
         echo "***ls the files"
         ls
         echo "***ls done"
-        wget
+
         
         
         
