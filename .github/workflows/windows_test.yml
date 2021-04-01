@@ -11,15 +11,9 @@ jobs:
     - uses: actions/checkout@v2
       with:
         submodules: true
-    - name: cache-wget
-      id: cache-wget
-      uses: actions/cache@v1
-      with:
-        path: "wget"
-        key: download-windows-wget
-    - name: wget
+    - name: down wget
       run: |
-        mkdir software
+        mkdir software && cd software
         echo "***test wget"
         cmake -version
         mingw32-make -version
@@ -28,6 +22,9 @@ jobs:
         echo "***ls the path"
         ls
         echo "*** ls the path done"
+        unzip wget.zip
+        cd wget-1.11.4-1-bin/bin && pwd
+        echo "***done"
         
         
         
