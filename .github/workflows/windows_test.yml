@@ -23,3 +23,8 @@ jobs:
         Invoke-WebRequest -Uri https://github.com/protocolbuffers/protobuf/archive/v3.11.2.zip -OutFile protobuf-3.11.2.zip
         7z x ./protobuf-3.11.2.zip
         cd protobuf-3.11.2
+        echo "***download protobuf done"
+        pwd
+        cmake -version
+        mingw32-make -version
+        echo "***done"
