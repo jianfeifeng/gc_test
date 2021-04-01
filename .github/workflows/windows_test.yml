@@ -25,6 +25,7 @@ jobs:
         7z x ./wget.zip
         cd wget-master
         set PATH="/d/a/gc_test/gc_test/software/wget-master/wget/bin:$PATH"
+        set path=%path%;D:\a\gc_test\gc_test\software\wget-master\wget\bin
         echo "***ls the files"
         ls
         echo "***ls done"
