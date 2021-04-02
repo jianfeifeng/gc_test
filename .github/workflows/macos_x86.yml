@@ -18,3 +18,4 @@ jobs:
           tar -zxvf gnu-getopt.tar.gz -C ./gnu_getopt
           pwd
           echo "***done"
+          brew install gnu-getopt
