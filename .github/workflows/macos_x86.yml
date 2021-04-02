@@ -20,8 +20,10 @@ jobs:
           echo "***done"
           brew install gnu-getopt
           echo 'export PATH="/usr/local/opt/gnu-getopt/bin:$PATH"' >> /Users/runner/.bash_profile
+          echo "***stage1 done!!!"
           echo 'export FLAGS_GETOPT_CMD="$(brew --prefix gnu-getopt)/bin/getopt"' >> /Users/runner/.bash_profile
-          cd /Users/runner/ && . ./.bash_profile
+          echo "***stage2 done!!!"
+          cd /Users/runner/ && . .bash_profile
           echo $FLAGS_GETOPT_CMD
           getopt --test
           echo $?
