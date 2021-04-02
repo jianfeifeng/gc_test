@@ -35,7 +35,10 @@ jobs:
           curl -o android-ndk-r20b-linux-x86_64.zip 'https://dl.google.com/android/repository/android-ndk-r20b-linux-x86_64.zip?hl=zh-cn'
           unzip -t android-ndk-r20b-linux-x86_64.zip
           ls 
-          echo "*** download ndk done"
+          echo "*** download ndk done1"
+          pwd
+          ls
+          echo "*** download ndk done2"
           
           
           
