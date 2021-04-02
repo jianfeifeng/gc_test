@@ -31,6 +31,24 @@ jobs:
           echo $?
           cd /usr/local/opt/gnu-getopt && ls
           echo "*** check gnu-getopt done"
+      - name: macos armv7
+        run: |
+          cd ~ && mkdir ndk && cd ndk
+          curl -o android-ndk-r20b-linux-x86_64.zip 'https://dl.google.com/android/repository/android-ndk-r20b-linux-x86_64.zip?hl=zh-cn'
+          unzip android-ndk-r20b-linux-x86_64.zip -d ./android_ndk
+          ls 
+          echo "*** download ndk done"
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
           
           
           
