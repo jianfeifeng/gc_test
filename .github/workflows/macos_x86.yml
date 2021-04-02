@@ -23,7 +23,8 @@ jobs:
           echo "***stage1 done!!!"
           echo 'export FLAGS_GETOPT_CMD="$(brew --prefix gnu-getopt)/bin/getopt"' >> /Users/runner/.bash_profile
           echo "***stage2 done!!!"
-          cd /Users/runner/ && . .bash_profile
+          source /Users/runner/.bash_profile
+          echo "***stage3 done!!!"
           echo $FLAGS_GETOPT_CMD
           getopt --test
           echo $?
