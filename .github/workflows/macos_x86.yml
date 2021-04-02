@@ -27,6 +27,10 @@ jobs:
           echo "***stage3 done!!!"
           echo $FLAGS_GETOPT_CMD
           getopt --help
-          getopt --test
+          getopt --test > /dev/null
+          echo $?
           cd /usr/local/opt/gnu-getopt && ls
           echo "*** check gnu-getopt done"
+          
+          
+          
