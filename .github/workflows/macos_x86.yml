@@ -26,7 +26,7 @@ jobs:
           source /Users/runner/.bash_profile
           echo "***stage3 done!!!"
           echo $FLAGS_GETOPT_CMD
-          getopt --test
+          getopt --help
           echo $?
           cd /usr/local/opt/gnu-getopt && ls
           echo "*** check gnu-getopt done"
