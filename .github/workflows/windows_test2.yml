@@ -20,3 +20,4 @@ jobs:
           echo "***enter the shell environment"
           ls
           echo "***list all the files"
+          wget
