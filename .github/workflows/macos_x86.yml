@@ -20,6 +20,7 @@ jobs:
           echo "***done"
           brew install gnu-getopt
           echo 'export PATH="/usr/local/opt/gnu-getopt/bin:$PATH"' >> /Users/runner/.bash_profile
+          source /Users/runner/.bash_profile
           getopt --test
           echo $?
-          cd /usr/local/opt && ls
+          cd /usr/local/opt/gnu-getopt && ls
