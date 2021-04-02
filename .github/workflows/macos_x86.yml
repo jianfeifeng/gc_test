@@ -21,8 +21,9 @@ jobs:
           brew install gnu-getopt
           echo 'export PATH="/usr/local/opt/gnu-getopt/bin:$PATH"' >> /Users/runner/.bash_profile
           echo 'export FLAGS_GETOPT_CMD="$(brew --prefix gnu-getopt)/bin/getopt"' >> /Users/runner/.bash_profile
-          bash /Users/runner/.bash_profile
+          cd /Users/runner/ && . ./.bash_profile
           echo $FLAGS_GETOPT_CMD
           getopt --test
           echo $?
           cd /usr/local/opt/gnu-getopt && ls
+          echo "*** check gnu-getopt done"
