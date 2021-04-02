@@ -33,8 +33,10 @@ jobs:
     - name: checkout-bash
       run: |
         echo "***checkout to bash"
+        export PATH=$PATH:/d/a/gc_test/gc_test/software/wget-master/wget/bin
         pwd
         ls
+        wget -h
         echo "***checkout to bash done"
       shell: bash
       
