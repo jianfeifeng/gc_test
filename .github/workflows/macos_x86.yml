@@ -1,0 +1,20 @@
+name: macos-armv7
+on: push
+jobs:
+  linux:
+    name: macos-armv7
+    runs-on: macos-latest
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v2
+      - name: macos armv7
+        run: |
+          pwd
+          mkdir software && cd software && mkdir gnu_getopt
+          curl -o gnu-getopt.tar.gz 'https://homebrew.bintray.com/bottles/gnu-getopt-2.36.2.catalina.bottle.tar.gz'
+          pwd
+          echo "***check the file"
+          ls
+          tar -zxvf gnu-getopt.tar.gz -C ./gnu_getopt
+          pwd
+          echo "***done"
