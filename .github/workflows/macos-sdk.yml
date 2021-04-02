@@ -1,12 +1,12 @@
-name: macos-armv8
+name: macos-sdk
 on: push
 jobs:
   linux:
-    name: macos-armv8
+    name: macos-sdk
     runs-on: macos-latest
     steps:
       - name: checkout code
         uses: actions/checkout@v2
-      - name: macos armv8
+      - name: macos sdk
         run: |
           cd / && ls
