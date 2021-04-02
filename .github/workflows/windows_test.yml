@@ -30,6 +30,14 @@ jobs:
         echo "***ls done"
         cmake -version
         mingw32-make -version
+    - name: checkout-bash
+      run: |
+        echo "***checkout to bash"
+        pwd
+        echo "***checkout to bash done"
+      shell: bash
+      
+         
 
         
         
