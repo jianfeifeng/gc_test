@@ -22,3 +22,4 @@ jobs:
           echo 'export PATH="/usr/local/opt/gnu-getopt/bin:$PATH"' >> /Users/runner/.bash_profile
           getopt --test
           echo $?
+          cd /usr/local/opt && ls
