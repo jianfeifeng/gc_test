@@ -18,5 +18,6 @@ jobs:
           echo "alias c++='c++-9'" >> ~/.bash_profile
           source ~/.bash_profile
           cat ~/.bash_profile
+          which gcc-9
           echo "****done"
           gcc -v
