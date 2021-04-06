@@ -9,7 +9,6 @@ jobs:
         uses: actions/checkout@v2
       - name: macos ios armv8
         run: |
-          echo $SHELL
           echo "*** cat shell"
           cat /etc/shells
           brew install gcc@9
