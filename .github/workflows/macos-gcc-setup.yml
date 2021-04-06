@@ -9,20 +9,7 @@ jobs:
         uses: actions/checkout@v2
       - name: macos ios armv8
         run: |    
-          echo "*** cat shell"
-          cat /etc/shells
           brew install gcc@9
-          gcc-9 -v   
-          echo " " >> ~/.bash_profile
-          echo "alias gcc='gcc-9'" >> ~/.bash_profile
-          echo "alias cc='gcc-9'" >> ~/.bash_profile
-          echo "alias g++='g++-9'" >> ~/.bash_profile
-          echo "alias c++='c++-9'" >> ~/.bash_profile
-          source ~/.bash_profile
-          cat ~/.bash_profile
-          which gcc-9
           cd /usr/local/bin
           ln -s gcc-9 gcc
-          gcc -v
-          echo "****done"
           gcc -v
