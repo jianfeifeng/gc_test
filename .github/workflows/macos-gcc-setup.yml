@@ -16,5 +16,6 @@ jobs:
           echo "alias g++='g++-9'" >> ~/.bash_profile
           echo "alias c++='c++-9'" >> ~/.bash_profile
           source ~/.bash_profile
+          cat ~/.bash_profile
           echo "****done"
           gcc -v
