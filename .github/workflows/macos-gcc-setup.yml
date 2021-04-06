@@ -3,7 +3,7 @@ on: [push, pull_request]
 jobs:
   linux:
     name: macos-gcc-setup
-    runs-on: macos-latest
+    runs-on: macos-11.0
     steps:
       - name: checkout code
         uses: actions/checkout@v2
