@@ -10,4 +10,10 @@ jobs:
       - name: macos ios armv8
         run: |
           brew install gcc@9
-          gcc-9 -v      
+          gcc-9 -v   
+          echo "alias gcc='gcc-9'" >> ~/.bash_profile
+          echo "alias cc='gcc-9'" >> ~/.bash_profile
+          echo "alias g++='g++-9'" >> ~/.bash_profile
+          echo "alias c++='c++-9'" >> ~/.bash_profile
+          echo "****done"
+          gcc -v
