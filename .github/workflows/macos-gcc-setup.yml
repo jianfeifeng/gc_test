@@ -21,9 +21,8 @@ jobs:
           source ~/.bash_profile
           cat ~/.bash_profile
           which gcc-9
-          CC=/usr/local/bin/gcc-9
-          GCC=/usr/local/bin/gcc-9
-          CXX=/usr/local/bin/g++-9
-          GXX=/usr/local/bin/g++-9
+          cd /usr/local/bin
+          ln -s gcc-9 gcc
+          gcc -v
           echo "****done"
           gcc -v
