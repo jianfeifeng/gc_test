@@ -13,4 +13,4 @@ jobs:
           cd /usr/local/bin
           ln -s gcc-9 gcc
           gcc -v
-          cat /proc/cpuinfo | grep "avx2"
+          sysctl -a | grep machdep.cpu.features
