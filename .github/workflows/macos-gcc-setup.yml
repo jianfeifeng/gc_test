@@ -8,7 +8,7 @@ jobs:
       - name: checkout code
         uses: actions/checkout@v2
       - name: macos ios armv8
-        run: |
+        run: |    
           echo "*** cat shell"
           cat /etc/shells
           brew install gcc@9
@@ -22,6 +22,8 @@ jobs:
           cat ~/.bash_profile
           which gcc-9
           CC=/usr/local/bin/gcc-9
+          GCC=/usr/local/bin/gcc-9
           CXX=/usr/local/bin/g++-9
+          GXX=/usr/local/bin/g++-9
           echo "****done"
           gcc -v
