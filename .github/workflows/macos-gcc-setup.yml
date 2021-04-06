@@ -13,12 +13,12 @@ jobs:
           cat /etc/shells
           brew install gcc@9
           gcc-9 -v   
-          echo " " >> ~/.bash_profile
-          echo "alias gcc='gcc-9'" >> ~/.bash_profile
-          echo "alias cc='gcc-9'" >> ~/.bash_profile
-          echo "alias g++='g++-9'" >> ~/.bash_profile
-          echo "alias c++='c++-9'" >> ~/.bash_profile
-          source ~/.bash_profile
+          echo " " >> ~/.zshrc
+          echo "alias gcc='gcc-9'" >> ~/.zshrc
+          echo "alias cc='gcc-9'" >> ~/.zshrc
+          echo "alias g++='g++-9'" >> ~/.zshrc
+          echo "alias c++='c++-9'" >> ~/.zshrc
+          source ~/.zshrc
           which gcc-9
           echo "****done"
           gcc -v
