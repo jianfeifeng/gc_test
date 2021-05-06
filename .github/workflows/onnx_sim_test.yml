@@ -11,5 +11,11 @@ jobs:
       - name: onnx_sim test on linux 
         run: |
           pip3 install onnx-simplifier
-          python3 -m onnxsim -h
+          mkdir onnx_models && cd onnx_models
+          wget https://github.com/onnx/models/blob/master/vision/classification/inception_and_googlenet/inception_v1/model/inception-v1-9.onnx
+          wget https://github.com/onnx/models/blob/master/vision/classification/inception_and_googlenet/inception_v2/model/inception-v2-9.onnx
+          echo "sim all the models"
+          python3 -m onnxsim inception-v1-9.onnx inception-v1-9_sim.onnx
+          python3 -m onnxsim inception-v2-9.onnx inception-v2-9_sim.onnx
+          ls
           
