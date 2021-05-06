@@ -10,7 +10,8 @@ jobs:
         uses: actions/checkout@v2
       - name: onnx_sim test on linux 
         run: |
-          pip3 install onnx-simplifier
+          pip3 install -U pip && pip3 install onnx-simplifier
+          pip3 install onnx -U
           mkdir onnx_models && cd onnx_models
           wget https://github.com/onnx/models/blob/master/vision/classification/inception_and_googlenet/inception_v1/model/inception-v1-9.onnx
           wget https://github.com/onnx/models/blob/master/vision/classification/inception_and_googlenet/inception_v2/model/inception-v2-9.onnx
